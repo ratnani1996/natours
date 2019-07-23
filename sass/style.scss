@@ -1,0 +1,191 @@
+/*
+COLORS:
+
+Light green: #7ed56f rgb(126,213,111)
+Medium green: #55c57a rgb(85,197,122)
+Dark green: #28b485 rgb(40,180,133)
+
+*/
+$color-primary : #55c57a;
+$color-primary-light : #7ed56f;
+$color-primary-dark : #28b485;
+$color-dark-grey : #777;
+$color-white: #ffff;
+$color-black : #0000;
+
+
+*,*::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline:none !important;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-dark-grey;
+    padding: 1vw;
+  }
+  
+  .header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.8),
+        rgba($color-primary-light, 0.8)
+      ),
+      url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+        .logo {
+        position: absolute;
+        display: inline-block;
+        top: 3vh;
+        left: 3vw;
+            img {
+            height: 30px;
+            opacity: 0.9;
+            }
+    }
+
+    .header-heading{
+      color: $color-white;
+      position: absolute;
+      top: calc(40% - 66px);
+      left: calc(50% - 256px);
+      backface-visibility: hidden;
+      text-align: center;
+
+      .heading{
+
+        .heading-main{
+          display: block;
+          font-size: 60px;
+          text-transform: uppercase;
+          letter-spacing: 21.6px;
+          font-weight: 700;
+          animation-name: moveInFromLeft;
+          animation-duration: 1s;
+          animation-timing-function: ease-out;
+        }
+
+        .heading-sub{
+          display: block;
+          text-transform: uppercase;
+          font-size: 18px;
+          letter-spacing: 14px;
+          font-weight: 400;
+          animation-name: moveInFromRight;
+          animation-duration: 1s;
+          animation-timing-function: ease-out;
+          animation-fill-mode: backwards;
+        }
+      }
+    }
+  }
+  
+ 
+  
+  @keyframes moveInFromLeft{
+      0%{
+          opacity: 0;
+          transform: translateX(-100px);
+      }
+  
+      80%{
+          transform: translateX(10px);
+      }
+      100%{
+          opacity: 1;
+          transform: translate(0);
+      }
+  }
+  
+  
+  @keyframes moveInFromRight{
+      0%{
+          opacity: 0;
+          transform: translateX(+100px);
+      }
+  
+      80%{
+          transform: translateX(-10px);
+      }
+      100%{
+          opacity: 1;
+          transform: translate(0);
+      }
+  }
+  .header .header-heading a{
+
+    &:link, &:visited{
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-dark-grey;
+      padding: 20px 40px 20px 40px;
+      position: relative;
+      display: inline-block;
+      border-radius:100px;
+      margin-top: 60px;
+      transition: all 0.2s;
+      position: relative;
+      animation-name: moveInFromBottom;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-out;
+      animation-delay: 0.75s;
+      animation-fill-mode: backwards;
+    }
+
+    &:hover{
+      transform: translateY(-2px);
+      box-shadow: 0px 10px 20px rgba($color-black,0.2);
+      &::after{
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    &:active{
+      transform: translatey(1px);
+      box-shadow: 0px 5px 10px rgba($color-black,0.2);
+    }
+    
+    &::after{
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $color-white;
+      border-radius: 100px;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+  }
+  
+  .btn-white{
+    background-color: $color-white;
+  }
+  
+  @keyframes moveInFromBottom{
+    0%{
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  
