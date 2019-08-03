@@ -147,7 +147,7 @@ section.section-about{
   height: 170vh;
 }
 
-.heading-secondary{
+section.section-about .heading-secondary{
   font-size: 2.2rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -164,7 +164,7 @@ section.section-about{
   text-align: center;
 }
 
-.heading-secondary:hover{
+section.section-about .heading-secondary:hover{
   transform: skewY(2deg) skewX(20deg) scale(1.1);
   cursor: default;
   text-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
@@ -373,22 +373,6 @@ section.section-about{
   font-weight: 400;
   font-size: 0.9rem;
   margin: 1rem 1rem 1rem 1rem;
-}
-
-.section-tours{
-  height: 120vh;
-  width: 100%;
-  background-color: #f7f7f7;
-  margin-top: -16rem;
-}
-
-.section-tours>.row{
-  position: relative;
-  top: 15rem;
-  text-align: center;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.4rem;
 }
 
 
