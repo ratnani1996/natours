@@ -529,3 +529,59 @@ section.section-tours::before {
 	top: 9rem;
 }
 
+/* section stories */
+
+.section-stories{
+	height: 120vh;
+	width: 100%;
+}
+
+.section-stories .row:first-child{
+	text-align: center;
+}
+
+.section-stories .story{
+	height: 35vh;
+	width: 65%;
+	background-color: rgba(255, 255, 255, 0.15);
+	margin: 0 auto;
+	box-shadow: 0.2rem 0.2rem 4rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.section-stories .story:not(:last-child){
+	margin-bottom: 5rem;
+}
+
+.section-stories .story>*{
+	position: relative;
+	top: 1rem;
+	left: 1rem;
+}
+
+.section-stories .story .story-avatar{
+	position: relative;
+	height: 10rem;
+	width: 10rem;
+	float: left;
+	background-color: black;
+	shape-outside: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+	margin-right: 1.3rem;
+}
+.section-stories .story .story-avatar::after{
+	clear: both;
+}
+
+.section-stories .story .story-title{
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	margin-bottom: 0.6rem;
+}
+
+.section-stories .story .story-description{
+	width: 95%;
+	text-align: justify;
+	font-size: 0.9rem;
+}
+
+
